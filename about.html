@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMC5 - Character Database</title>
+    <link rel="stylesheet" href="css/task2.css">
+    <script src="Js/task2.js" defer></script>
+
+</head>
+
+<body>
+    <video class="background-video" autoplay muted loop playsinline>
+    <source src="media/videoplayback.mp4" type="video/mp4">
+</video>
+    <div class="video-overlay"></div>
+
+
+    <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h1>Devil May Cry 5</h1>
+        <h2>Character Database</h2>
+
+        <p>Explore the characters of Devil May Cry 5.</p>
+
+        <section class="controls">
+            <label for="searchInput">Search character:</label>
+            <input type="text" id="searchInput" placeholder="Enter character name">
+
+            <label for="typeFilter">Filter by type:</label>
+            <select id="typeFilter">
+                <option value="all">All characters</option>
+                <option value="Human">Human</option>
+                <option value="Demon">Demon</option>
+                <option value="Hybrid">Hybrid</option>
+            </select>
+        </section>
+
+
+
+        <section class="statistics">
+
+            <p>Total characters: <span id="totalCount">0</span></p>
+            <p>Average power: <span id="averagePower">0</span></p>
+        </section>
+
+        <section>
+            <h3>Characters</h3>
+            <p id="noResults" hidden>No characters found.</p>
+            <div id="characterList"></div>
+        </section>
+
+        <section class="character-details">
+            <h3>Character Access</h3>
+            <p id="actionMessage">Select a character to view access information.</p>
+            <div id="actionArea"></div>
+        </section>
+    </main>
+</body>
+
+</html>

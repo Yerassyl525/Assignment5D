@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #101010;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    pointer-events: none;
+}
+
+.video-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+    background: black;
+}
+
+.site-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid darkred;
+    border-radius: 4px;
+}
+
+.site-nav a:hover {
+    background: darkred;
+}
+
+main {
+    width: min(700px, 92%);
+    margin: 30px auto;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #ff3333;
+}
+
+form,
+.preview,
+#successMessage {
+    background: rgba(20, 20, 20, 0.95);
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+fieldset {
+    border: 1px solid #777;
+    padding: 20px;
+}
+
+legend {
+    color: #ff3333;
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group>label:first-child,
+.form-group>input[type="text"],
+.form-group>input[type="email"],
+.form-group>input[type="number"],
+.form-group>input[type="date"],
+.form-group>textarea {
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 11px;
+    margin-top: 7px;
+    background: #222;
+    color: white;
+    border: 1px solid #777;
+    border-radius: 4px;
+}
+
+input[type="color"] {
+    display: block;
+    margin-top: 8px;
+    width: 65px;
+    height: 40px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #ff3333;
+    outline-offset: 2px;
+}
+
+.error {
+    display: block;
+    color: #ff7777;
+    margin-top: 6px;
+}
+
+.invalid {
+    border: 2px solid #ff3333 !important;
+}
+
+[aria-invalid="true"] {
+    border-color: #ff3333;
+}
+
+button {
+    padding: 11px 20px;
+    margin: 5px;
+    background: darkred;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: red;
+}
+
+#errorSummary {
+    color: #ff7777;
+    font-weight: bold;
+}
+
+#previewCard,
+#finalProfile {
+    padding: 15px;
+    background: #222;
+    border-radius: 5px;
+    overflow-wrap: anywhere;
+}
+
+#previewColor {
+    width: 50px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 500px) {
+    fieldset {
+        padding: 12px;
+    }
+    .site-nav {
+        gap: 8px;
+    }
+    .site-nav a {
+        padding: 8px 10px;
+    }
+}

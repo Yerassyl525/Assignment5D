@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMC5 - Fan Form</title>
+    <link rel="stylesheet" href="css/task3.css">
+    <script src="js/task3.js" defer></script>
+</head>
+
+<body>
+    <video class="background-video" autoplay muted loop playsinline>
+        <source src="media/videoplayback.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+
+    <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">Meet the Characters</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h1>Contact Me</h1>
+
+        <form id="fanForm" action="#" method="post">
+            <fieldset>
+                <legend>Devil May Cry 5 Fan Form</legend>
+
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <small class="error" id="nameError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <small class="error" id="emailError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="13" max="100" required>
+                    <small class="error" id="ageError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Your birthday:</label>
+                    <input type="date" id="date" name="date" required>
+                    <small class="error" id="dateError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="color">Favorite color:</label>
+                    <input type="color" id="color" name="color" value="#ff0000">
+                </div>
+
+                <div class="form-group">
+                    <p>Who is your favorite character?</p>
+
+                    <input type="radio" id="dante" name="character" value="Dante" required>
+                    <label for="dante">Dante</label>
+
+                    <input type="radio" id="nero" name="character" value="Nero">
+                    <label for="nero">Nero</label>
+
+                    <input type="radio" id="vergil" name="character" value="Vergil">
+                    <label for="vergil">Vergil</label>
+
+                    <input type="radio" id="v" name="character" value="V">
+                    <label for="v">V</label>
+
+                    <small class="error" id="characterError"></small>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="fan" name="fan">
+                    <label for="fan">I am a Devil May Cry fan</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your message:</label>
+                    <textarea id="message" name="message" maxlength="300" placeholder="Write at least 10 characters" required></textarea>
+                    <small class="error" id="messageError"></small>
+                </div>
+
+                <p id="errorSummary" role="alert" tabindex="-1"></p>
+
+                <button type="submit">Send</button>
+                <button type="reset">Reset</button>
+            </fieldset>
+        </form>
+
+
+        <section class="preview">
+            <h2>Live Preview</h2>
+            <div id="previewCard">
+                <p>Name: <span id="previewName">Not entered</span></p>
+                <p>Email: <span id="previewEmail">Not entered</span></p>
+                <p>Age: <span id="previewAge">Not entered</span></p>
+                <p>Favorite character: <span id="previewCharacter">Not selected</span></p>
+                <p>Message: <span id="previewMessage">Not entered</span></p>
+                <p>Fan: <span id="previewFan">No</span></p>
+                <div id="previewColor"></div>
+            </div>
+        </section>
+
+        <section id="successMessage" hidden>
+            <h2>Profile Created Successfully!</h2>
+            <div id="finalProfile"></div>
+        </section>
+    </main>
+</body>
+
+</html>
